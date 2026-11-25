@@ -86,9 +86,13 @@
               ? "Account created successfully! You are signed in."
               : "Account created! Please check your email to confirm your account.";
           } else {
-            status.textContent =
-              "Welcome back! You are signed in successfully.";
-          }
+           status.textContent =
+  "Welcome back! Redirecting to Velto...";
+
+setTimeout(() => {
+  window.location.href = "dashboard.html";
+}, 1000);
+          
 
         } catch (error) {
           if (status) {
